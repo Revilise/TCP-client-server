@@ -17,7 +17,10 @@ namespace Client
         {
             try
             {
-                TcpClient client = new TcpClient("26.246.185.214", PORT);
+                Console.WriteLine("type server address in: ");
+                string ip = Console.ReadLine();
+
+                TcpClient client = new TcpClient(ip, PORT);
                 StreamReader rs = new StreamReader(client.GetStream());
                 NetworkStream ws = client.GetStream();
 
